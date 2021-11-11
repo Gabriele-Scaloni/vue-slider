@@ -25,21 +25,14 @@ h3, p {
     display: block;
     width: 550px;
     height: 300px;
-    
+    display: block;
 }
 
- .item {
-    display: none;
 
+.item {
+    display: none;
 } 
 
-.item.active  {
-    display: block;
-
-}
-
-
- 
 .text {
     position: absolute;
     top: 70%;
@@ -49,14 +42,7 @@ h3, p {
 .thumbs {
     position: relative;
    
-} 
-/* 
-.thumb {
-    width: 150px;
-    height:60px;
-    
-    border:1px solid black;
-} */
+}  
 
 .thumb img {
     display: flex;
@@ -64,11 +50,16 @@ h3, p {
     border:1px solid black;
     width: 150px;
     height:60px;
-    opacity: 0.5;
+    opacity: 0.3; 
 }
-.thumb.item.active img{
+
+
+
+.thumb.active img {
     border:1px solid white;
+    opacity: 1;
 }
+
 
 .next { 
     position: absolute;
@@ -81,6 +72,7 @@ h3, p {
     border: 1px solid black;
     background-color: grey;
     z-index: 1;
+    cursor: pointer;
 }
 .before {    
     position: absolute;
@@ -93,4 +85,5 @@ h3, p {
     border: 1px solid black;
     background-color: grey;
     z-index: 1;
+    cursor: pointer;
 }

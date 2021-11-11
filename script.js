@@ -4,47 +4,50 @@ var carousel = new Vue ({
         activeSlide:0,
         slides:[
             {
-                Image:'img/01.jpg',
+                image:'img/01.jpg',
                 title:"Svezia",
                 text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit sapiente nam, animi voluptates aliquid recusandae accusantium placeat ratione vero hic rem repellat soluta eaque ipsa possimus quo! Eveniet, libero eaque!"
             },
             {
-                Image:'img/02.jpg',
+                image:'img/02.jpg',
                 title:"Svizzera",
-                text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit."
+                text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit sapiente nam, animi voluptates aliquid "
             },
             {
-                Image:'img/03.jpg',
+                image:'img/03.jpg',
                 title:"Gran Bretagna",
                 text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit sapiente nam, animi voluptates aliquid recusandae accusantium placeat ratione vero hic"
             },
             {
-                Image:'img/04.jpg',
+                image:'img/04.jpg',
                 title:"Germania",
                 text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit sapiente nam, animi voluptates aliquid recusandae accusantium placeat ratione vero hic rem repellat soluta eaque ipsa possimus quo! Eveniet, libero eaque!"
             },
             {
-                Image:'img/05.jpg',
+                image:'img/05.jpg',
                 title:"Canarie",
                 text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit sapiente nam, animi voluptates aliquid recusandae accusantium placeat ratione vero hic !"
             },
         ],
     },
    
-     methods: {
+    methods: {
+        //funzione per andare sull'img seguente
         slideNext : function(){
             if(this.activeSlide === this.slides.length - 1) {
                 this.activeSlide = 0;
             } else {
                 this.activeSlide ++;
             }
-          }, 
-
-            slideBefore : function() {
-                if(this.activeSlide === 0 ){
-                    this.activeSlide
-                }
+        }, 
+        //funzione per andare sull'img precedente, se parte da 0 vado all'ultima
+        slideBefore : function() {
+            if(this.activeSlide === 0 ){
+                this.activeSlide = this.slides.length -1;
+            }else {
+                this.activeSlide --;
             }
         }
+    }
             
 });
